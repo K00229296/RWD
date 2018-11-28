@@ -1,0 +1,346 @@
+html, body {
+    background-color: #999999;
+}
+
+header{
+    background-color: #111111;
+    text-align: center;
+    position:relative;
+    z-index: 999;
+    width: 100%;
+}
+
+.searchBar[type=text]{
+    position: relative;
+    bottom: 50px;
+    right: 50px;
+    width:200px;
+    box-sizing:border-box;
+    border:2px solid #ccc;
+    border-radius:60px;
+    margin-top: 13px;
+    font-size:14px;
+    font-family:arial;
+    background-color:white;
+    padding: 12px 10px 10px 40px;
+    float: right;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+em{
+    color: #004040;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: ' ';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+    top: 7px;
+}
+
+nav{
+    position:absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: #111111;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: helvetica;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+
+nav a:hover{
+    color: #B954C0;
+    transition: color;
+}
+
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 220ms ease-in-out 220ms;
+}
+
+@media screen and (min-width: 800px)
+    .nav-toggle-label{
+     display:none;
+}
+
+
+header{
+    display: grid;
+    grid-template-columns: 1fr auto minax(600px, 1fr);
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #287A7A;
+    color: #ffffff;
+    padding: 13px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #287A7A;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: #287A7A;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.socials{
+    word-spacing: 30px;
+    text-align: center;
+}
+
+////////////////////
+SIGN UP / LOGIN FORM
+
+body {font-family: Arial;
+
+}
+
+* {box-sizing: border-box
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #287A7A;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+.cancelButton {
+    padding: 14px 20px;
+    background-color: #B954C0;
+}
+
+.cancelButton, .signupButton {
+  float: left;
+  width: 50%;
+}
+
+.cancelButton2{
+    background-color: #B954C0;
+}
+
+.loginButton{
+    background-color: #287A7A;
+}
+
+.cancelButton2, .loginButton {
+  float: left;
+  width: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+    
+/////////////////
+
+} .loginBody, .featuresBody, .reviewsBody{
+        background-color: #5E5E5E;
+}
+
+////////
+
+
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: center;
+  }
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.grid > article img {
+  max-width: 100%;
+}
+.text {
+  padding: 0 20px 20px;
+  color: white;
+}
+.text > button {
+  background: #B954C0;
+  border: 1;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  }
+
+.reviewTitle{
+    color: white;
+}
